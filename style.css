@@ -1,29 +1,104 @@
+body {
+	--color-bg: #401031;
+	--color-text: #fff;
+
+	--brand-light-yellow: #ffd058;
+
+	--margin-root: 0.5rem;
+
+	--max-width: 50rem;
+
+	background-color: var(--color-bg);
+
+	color: var(--color-text);
+	font-family: monospace;
+
+	/* No padding or margin, it is all added on other (child) elements */
+	padding: 0;
+	margin: 0;
+
+	/* This is so that we can have a max-width page (ie content doesn't grow past a certain width but stays in the center) and still have the background extend on all sides */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	/* The verticle (top and bottom) margins are 0,
+	 * the horizontal (left and right) margins are --margin-root
+	 */
+	margin: 0 var(--margin-root);
+
+	max-width: var(--max-width);
+}
+
 h1 {
-  padding:
-
+	color: var(--brand-light-yellow);
 }
 
-h2 {
-  position: relative;
+/* Add a "#" before the text of every h2 */
+h2::before {
+	content: '# ';
+
+	/* Reduce visual emphasis on this */
+	opacity: 0.5;
 }
 
-h3 {
-  position: sticky;
-  top: 0;
+#main-nav-wrapper {
+	/* Fill the full width of the screen. */
+	width: 100%;
+
+	/* This is 50% darker than the main background color.
+	 * It is a set hex value so it is consistent with the theme color.
+	 */
+	background-color: #200818;
+
+	/* This is to allow the background for the nav to extend 100% of the width of the page, but have the text stay aligned with the main content */
+	display: flex;
+	justify-content: center;
 }
 
-* {
-  text-align: center;
+#main-nav {
+	/* This is using flex like it was intended *gasps*
+	 * to align elements in a 1-D list (the nav bar)
+	 */
+	display: flex;
+	flex-wrap: wrap;
+
+	/* Fill 100% of the available space, limited by the screen size and max-width property */
+	width: 100%;
+
+	/* needs to be multipled by two b/c its centered. otherwise it moves only half the amount */
+	--extra-padding-on-left: 2 * var(--margin-root);
+	max-width: calc(var(--max-width) + var(--extra-padding-on-left));
 }
 
-.nav {
-  text-align: left;
-  background-color: black;
+#main-nav>* {
+	/* Prevent layout shift when hovering over element */
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: transparent;
+
+	/* The padding is here rather than in the gap property of the parent b/c it makes the touch target larger */
+	padding: var(--margin-root);
 }
 
-.nav a {
-  color: white;
-  font-size: 20px;
-  padding: 16px 20px;
-  text-decoration: none;
+#main-nav a {
+	/* Prevent the color from being set to blue */
+	color: var(--color-text);
+
+	/* Prevent the underline from showing up under the links */
+	text-decoration: none;
+}
+
+#main-nav a:hover,
+#main-nav a:focus {
+	/* Transparent white to allow the background color to bleed through */
+	background: rgba(255, 255, 255, 0.2);
+
+	/* On the top and bottom, make the border color white. On the left and right, make it transparent */
+	border-color: white transparent;
+
+	/* Prevent that blue box from showing. Only ok because we have other (very obvious) ways of indicating that this element is focused */
+	outline: none;
 }
