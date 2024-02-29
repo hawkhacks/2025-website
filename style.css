@@ -34,6 +34,7 @@ main {
 
 h1 {
 	color: var(--brand-light-yellow);
+	text-align: center;
 }
 
 /* Add a "#" before the text of every h2 */
@@ -101,4 +102,9 @@ h2::before {
 
 	/* Prevent that blue box from showing. Only ok because we have other (very obvious) ways of indicating that this element is focused */
 	outline: none;
+}
+
+#schedule h4,
+#schedule p {
+	display: inline;
 }
