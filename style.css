@@ -2,11 +2,14 @@ body {
 	--color-bg: #401031;
 	--color-text: #fff;
 
+	--brand-dark-purple: #5e3abc;
+	--brand-dark-yellow: #ffb800;
 	--brand-light-yellow: #ffd058;
+	--brand-light-yellow-2: #fff078;
 
 	--margin-root: 0.5rem;
 
-	--max-width: 50rem;
+	--max-width: 42rem;
 
 	background-color: var(--color-bg);
 
@@ -92,6 +95,10 @@ h2::before {
 	text-decoration: none;
 }
 
+#main-nav a * {
+	vertical-align: middle;
+}
+
 #main-nav a:hover,
 #main-nav a:focus {
 	/* Transparent white to allow the background color to bleed through */
@@ -104,7 +111,38 @@ h2::before {
 	outline: none;
 }
 
+#schedule {
+	/* text-align: center; */
+}
+
 #schedule h4,
 #schedule p {
 	display: inline;
+}
+
+/* h2, */
+/* h3, */
+h4 {
+	color: var(--brand-light-yellow-2);
+  display: inline;
+}
+.highlight {
+    color: var(--brand-light-yellow-2); /* Change to desired color */
+}
+#icon {
+	width: 1.5em;
+	height: 1.5em;
+
+	margin-right: 0.5em;
+
+	border-radius: 1.5em;
+}
+
+h1>div {
+	color: var(--brand-dark-yellow);
+
+	/* For proper image vertical alignment */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
