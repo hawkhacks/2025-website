@@ -111,8 +111,11 @@ h2::before {
 	outline: none;
 }
 
-#schedule {
-	/* text-align: center; */
+#sign-up {
+	text-align: center;
+	--margin-vertical: 4em;
+	margin-top: var(--margin-vertical);
+	margin-bottom: var(--margin-vertical);
 }
 
 #schedule h4,
@@ -124,11 +127,14 @@ h2::before {
 /* h3, */
 h4 {
 	color: var(--brand-light-yellow-2);
-  display: inline;
+	display: inline;
 }
+
 .highlight {
-    color: var(--brand-light-yellow-2); /* Change to desired color */
+	color: var(--brand-light-yellow-2);
+	/* Change to desired color */
 }
+
 #icon {
 	width: 1.5em;
 	height: 1.5em;
