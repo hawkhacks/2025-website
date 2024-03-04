@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="theme-color" content="#200818" />
+	<meta name="theme-color" content="hsl(256.62, 52.85%, 10%)" />
 	<title>HawkHacks</title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="TimeLine.js" type="module"></script>
@@ -59,7 +59,7 @@
 						document.getElementById("sign-up").style.display = "none";
 						return;
 					} else {
-						countdownElem.textContent = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2024!`;
+						countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2024!`;
 
 						window.requestAnimationFrame(countdown);
 					}
@@ -99,7 +99,7 @@
 				<br>
 			</p>
 
-			<div class="sign-up2">
+			<div class="sign-up">
 				<a href="https://forms.gle/3So1ojUt1hA75UkX6" target="_blank">Sign up now!</a>
 			</div>
 		</section>

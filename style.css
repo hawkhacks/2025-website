@@ -1,8 +1,10 @@
 body {
-	--color-bg: #401031;
-	--color-text: #fff;
+	/* --color-bg: hsl(257.59, 100%, 10%); */
+	--color-bg: hsl(256.62, 52.85%, 10%);
+	--color-text: #eee;
 
 	--brand-dark-purple: #5e3abc;
+	--brand-light-purple: #d6c5ff;
 	--brand-dark-yellow: #ffb800;
 	--brand-light-yellow: #ffd058;
 	--brand-light-yellow-2: #fff078;
@@ -15,7 +17,7 @@ body {
 
 	color: var(--color-text);
 	font-family: monospace;
-	font-size: large;
+	font-size: 1.2em;
 
 	/* No padding or margin, it is all added on other (child) elements */
 	padding: 0;
@@ -58,7 +60,7 @@ h2::before {
 	/* This is 50% darker than the main background color.
 	 * It is a set hex value so it is consistent with the theme color.
 	 */
-	background-color: #200818;
+	/* background-color: hsl(256.62, 52.85%, 5%); */
 
 	/* This is to allow the background for the nav to extend 100% of the width of the page, but have the text stay aligned with the main content */
 	display: flex;
@@ -150,7 +152,7 @@ h1>div {
 }
 
 #below-header {
-	font-size: 2em;
+	font-size: 1.1em;
 	text-align: center;
 
 	--margin-vertical: 2em;
@@ -158,18 +160,9 @@ h1>div {
 	margin-bottom: var(--margin-vertical);
 }
 
-/* #countdown.js {} */
-
 .sign-up {
 	text-align: center;
 	margin: 1em auto;
-}
-
-.sign-up:hover *,
-.sign-up:focus * {
-	border-color: var(--brand-dark-purple);
-
-	text-decoration-color: var(--brand-dark-purple);
 }
 
 .sign-up * {
@@ -178,7 +171,7 @@ h1>div {
 	text-decoration-color: transparent;
 	transition: text-decoration-color 0.2s ease-in-out, border 0.2s ease-in-out;
 
-	padding: 0.5em;
+	padding: 0.25em;
 	border-radius: 0.5em;
 
 	border-width: 0.1em;
@@ -187,35 +180,14 @@ h1>div {
 
 	background-color: var(--brand-dark-yellow);
 
-}
-
-.sign-up2 {
-	text-align: center;
-	margin: 1em auto;
 }
 
 .sign-up2:hover *,
-.sign-up2:focus * {
-	border-color: var(--brand-dark-purple);
-
+.sign-up2:focus *,
+.sign-up:hover *,
+.sign-up:focus * {
+	/* border-color: var(--brand-dark-purple); */
 	text-decoration-color: var(--brand-dark-purple);
-}
-
-.sign-up2 * {
-	color: var(--brand-dark-purple);
-	text-decoration: underline;
-	text-decoration-color: transparent;
-	transition: text-decoration-color 0.2s ease-in-out, border 0.2s ease-in-out;
-
-	padding: 0.5em;
-	border-radius: 0.5em;
-
-	border-width: 0.1em;
-	border-color: transparent;
-	border-style: solid;
-
-	background-color: var(--brand-dark-yellow);
-
 }
 
 #sdgs {
@@ -224,34 +196,4 @@ h1>div {
 
 .sdg-img {
 	width: 20%;
-}
-
-#countdown {
-	font-size: 17px;
-	/* Adjust the font size as needed */
-
-}
-
-.sign-up a {
-	padding: 5px 10px;
-	/* Adjust padding to make the button smaller */
-	/*background-color: transparent; /* Remove background color */
-	/*border: none; /* Remove border */
-	font-size: 19px;
-	/* Adjust font size as needed */
-	text-decoration: none;
-	/* Remove underline */
-	/* Set text color */
-}
-
-.sign-up2 a {
-	padding: 5px 10px;
-	/* Adjust padding to make the button smaller */
-	/*background-color: transparent; /* Remove background color */
-	/*border: none; /* Remove border */
-	font-size: 13px;
-	/* Adjust font size as needed */
-	text-decoration: none;
-	/* Remove underline */
-	/* Set text color */
 }
