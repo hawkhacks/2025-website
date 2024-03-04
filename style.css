@@ -32,12 +32,14 @@ main {
 	 */
 	margin: 0 var(--margin-root);
 
+	width: calc(100% - var(--margin-root) * 2);
 	max-width: var(--max-width);
 }
 
 h1 {
 	color: var(--brand-light-yellow);
 	text-align: center;
+	font-size: 3rem;
 }
 
 /* Add a "#" before the text of every h2 */
@@ -111,13 +113,6 @@ h2::before {
 	outline: none;
 }
 
-#sign-up {
-	text-align: center;
-	--margin-vertical: 4em;
-	margin-top: var(--margin-vertical);
-	margin-bottom: var(--margin-vertical);
-}
-
 #schedule h4,
 #schedule p {
 	display: inline;
@@ -151,4 +146,100 @@ h1>div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#below-header {
+	font-size: 2em;
+	text-align: center;
+
+	--margin-vertical: 2em;
+	margin-top: var(--margin-vertical);
+	margin-bottom: var(--margin-vertical);
+}
+
+/* #countdown.js {} */
+
+.sign-up {
+	text-align: center;
+	margin: 1em auto;
+}
+
+.sign-up:hover *,
+.sign-up:focus * {
+	border-color: var(--brand-dark-purple);
+
+	text-decoration-color: var(--brand-dark-purple);
+}
+
+.sign-up * {
+	color: var(--brand-dark-purple);
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: text-decoration-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+	padding: 0.5em;
+	border-radius: 0.5em;
+
+	border-width: 0.1em;
+	border-color: transparent;
+	border-style: solid;
+
+	background-color: var(--brand-dark-yellow);
+
+}
+.sign-up2 {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.sign-up2:hover *,
+.sign-up2:focus * {
+  border-color: var(--brand-dark-purple);
+
+  text-decoration-color: var(--brand-dark-purple);
+}
+
+.sign-up2 * {
+  color: var(--brand-dark-purple);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+  padding: 0.5em;
+  border-radius: 0.5em;
+
+  border-width: 0.1em;
+  border-color: transparent;
+  border-style: solid;
+
+  background-color: var(--brand-dark-yellow);
+
+}
+#sdgs {
+	position: relative;
+}
+
+.sdg-img {
+	width: 20%;
+}
+
+#countdown {
+    font-size: 17px; /* Adjust the font size as needed */
+  
+}
+.sign-up a {
+  padding: 5px 10px; /* Adjust padding to make the button smaller */
+  /*background-color: transparent; /* Remove background color */
+  /*border: none; /* Remove border */
+  font-size: 19px; /* Adjust font size as needed */
+  text-decoration: none; /* Remove underline */
+   /* Set text color */
+}
+.sign-up2 a {
+  padding: 5px 10px; /* Adjust padding to make the button smaller */
+  /*background-color: transparent; /* Remove background color */
+  /*border: none; /* Remove border */
+  font-size: 13px; /* Adjust font size as needed */
+  text-decoration: none; /* Remove underline */
+   /* Set text color */
 }

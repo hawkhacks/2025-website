@@ -31,59 +31,78 @@
 				HawkHacks
 			</div>
 		</h1>
-    
-		<div id="sign-up">
-			<p> Sign up now! </p>
+
+		<div id="below-header">
+			<article id="countdown"></article>
+			<script>
+				const countdown = () => {
+					const current = Date.now();
+					const end = Date.parse("2024-05-25T10:00:00.000-05:00");
+					const differenceInMs = end - current;
+
+					const totalSeconds = differenceInMs / 1000;
+					const totalMinutes = totalSeconds / 60;
+					const totalHours = totalMinutes / 60;
+					const totalDays = totalHours / 24;
+
+					const secs = Math.floor(totalSeconds) % 60;
+					const mins = Math.floor(totalMinutes) % 60;
+					const hours = Math.floor(totalHours) % 24;
+					const days = Math.floor(totalDays);
+
+					const countdownElem = document.getElementById("countdown");
+					countdownElem.classList.add("js")
+
+
+					if (differenceInMs < 0) {
+						countdownElem.textContent = "HawkHacks 2024 has begun!";
+						document.getElementById("sign-up").style.display = "none";
+						return;
+					} else {
+						countdownElem.textContent = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks2024!`;
+
+						window.requestAnimationFrame(countdown);
+					}
+				}
+				window.requestAnimationFrame(countdown);
+			</script>
+
+			<div class="sign-up">
+				<a href="https://forms.gle/3So1ojUt1hA75UkX6" target="_blank">Sign up now!</a>
+			</div>
 		</div>
 
 		<section>
 			<h2>What is HawkHacks?</h2>
-      <hr>
-			<p>HawkHacks is an international virtual hackathon for middle and high school students on <span class="highlight"> Saturday, May 25th,</span> and <span class ="highlight">Sunday, May 26th</span>. Make
+			<hr>
+			<p>HawkHacks is an international virtual hackathon for middle and high school students on <span
+					class="highlight"> Saturday, May 25th,</span> and <span class="highlight">Sunday, May 26th</span>.
+				Make
 				teams of up to four people (individuals welcome!) and get ready for a weekend full of brainstorming,
 				coding, and pitching.
 
-        <br><br>
-        Hawkhacks will consist of two segments:
-        <br><br>
+				<br><br>
+				Hawkhacks will consist of two segments:
+				<br><br>
 
-        <span class="highlight">Ideathon:</span> You will have the weekend (both days) to build a coding-related solution related to a given problem, meet with expert mentors, and develop a pitch.
-         <br><br>
-        <span class="highlight">Capture the flag:</span> On Sunday you will be given a set of competitive-coding style problems themed towards our chosen social issues.
-        <br><br>
+				<span class="highlight">Ideathon:</span> You will have the weekend (both days) to build a coding-related
+				solution related to a given problem, meet with expert mentors, and develop a pitch.
+				<br><br>
+				<span class="highlight">Capture the flag:</span> On Sunday you will be given a set of competitive-coding
+				style problems themed towards our chosen social issues.
+				<br><br>
 
-        The top performers accross both segments will be declared the winners! Registration is open! Click here to sign up! (Note: at least one team member must be 13 or older to
+				The top performers accross both segments will be declared the winners! Registration is open! Click here
+				to sign up. (Note: at least one team member must be 13 or older to
 				sign up for HawkHacks).
-
+      <br>
+        <br>
 			</p>
+
+			<div class="sign-up2">
+				<a href="https://forms.gle/3So1ojUt1hA75UkX6" target="_blank">Sign up now!</a>
+			</div>
 		</section>
-
-		
-    
-		
-		<!-- <time-line>
-			<h3>5/20/23</h3>
-			<h3>Morning</h3>
-			<p>Item 1</p>
-	
-			<h3>5/20/23, Afternoon</h3>
-			<p>Item 1</p>
-	
-			<h3>5/20/23, Evening</h3>
-			<p>Item 1</p>
-	
-			<h3>5/21/23</h3>
-			<h3>Morning</h3>
-			<p>Item 1</p>
-	
-			<h3>Afternoon</h3>
-			<p>Item 1</p>
-	
-			<h3>Evening</h3>
-			<p>Item 1</p>
-		</time-line> -->
-
-		<!-- *  https://www.w3schools.com/howto/howto_css_timeline.asp  * -->
 
 	</main>
 
