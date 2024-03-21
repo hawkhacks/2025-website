@@ -219,3 +219,14 @@ h1>div {
 #past-events>ul>li>a {
 	color: var(--brand-light-purple);
 }
+
+#sponser-wrapper {
+	display: flex;
+	align-items: center;
+	justify-self: center;
+}
+
+.sponser {
+	width: 49%;
+	background-color: #fff;
+}
