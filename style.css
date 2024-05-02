@@ -6,8 +6,6 @@ body {
     --brand-dark-purple: #5e3abc;
     --brand-light-purple: #d6c5ff;
     --brand-dark-yellow: #ffb800;
-    --brand-light-yellow: #ffd058;
-    --brand-light-yellow-2: #fff078;
 
     --margin-root: 0.5rem;
 
@@ -40,7 +38,7 @@ main {
 }
 
 h1 {
-    color: var(--brand-light-yellow);
+    color: var(--brand-dark-yellow);
     text-align: center;
     font-size: 3rem;
 }
@@ -124,12 +122,13 @@ h2::before {
 /* h2, */
 /* h3, */
 h4 {
-    color: var(--brand-light-yellow-2);
+    color: var(--brand-dark-yellow);
     display: inline;
 }
 
 .highlight {
-    color: var(--brand-light-yellow-2);
+    color: var(--brand-dark-yellow);
+    font-weight: bold;
     /* Change to desired color */
 }
 
@@ -225,6 +224,7 @@ h1 > div {
     display: flex;
     align-items: center;
     justify-self: center;
+    gap: 1em;
 }
 
 .sponser {
