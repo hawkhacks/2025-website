@@ -1,129 +1,146 @@
 <!-- https://docs.google.com/document/d/1Bw4vE8kieFT0Z4jzarOiGeXQdV4GO-N4FGSZMbblf3Y/edit#heading=h.x0zpm8wx51g7 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="hsl(256.62, 52.85%, 10%)" />
+        <meta name="color-scheme" content="only dark" />
+        <title>HawkHacks</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="theme-color" content="hsl(256.62, 52.85%, 10%)" />
-	<meta name="color-scheme" content="only dark">
-	<title>HawkHacks</title>
-	<link rel="stylesheet" href="style.css" />
-</head>
+    <body>
+        <div id="main-nav-wrapper">
+            <nav id="main-nav">
+                <!-- I feel like these should be consistent/have an indicator as to whether they open in  a new page or scroll -->
+                <a id="home" href="index.html">Home</a>
+                <a id="history" href="history.html">History</a>
+                <a id="schedule" href="schedule.html">Schedule</a>
+                <a id="theme" href="theme.html">Theme</a>
+            </nav>
+        </div>
 
-<body>
-	<div id="main-nav-wrapper">
-		<nav id="main-nav">
-			<!-- I feel like these should be consistent/have an indicator as to whether they open in  a new page or scroll -->
-			<a id="home" href="index.html">Home</a>
-			<a id="history" href="history.html">History</a>
-			<a id="schedule" href="schedule.html">Schedule</a>
-			<a id="theme" href="theme.html">Theme</a>
-		</nav>
-	</div>
+        <main>
+            <h1>
+                <div>
+                    <img id="icon" src="favicon.png" />
+                    <span>Hawk<wbr />Hacks</span>
+                </div>
+            </h1>
 
-	<main>
-		<h1>
-			<div>
-				<img id="icon" src="favicon.png" />
-				<span>Hawk<wbr/>Hacks</span>
-			</div>
-		</h1>
+            <div id="below-header">
+                <article id="countdown"></article>
+                <script>
+                    const countdown = () => {
+                        const current = Date.now();
+                        const end = Date.parse("2024-05-25T10:00:00.000-05:00");
+                        const differenceInMs = end - current;
 
-		<div id="below-header">
-			<article id="countdown"></article>
-			<script>
-				const countdown = () => {
-					const current = Date.now();
-					const end = Date.parse("2024-05-25T10:00:00.000-05:00");
-					const differenceInMs = end - current;
+                        const totalSeconds = differenceInMs / 1000;
+                        const totalMinutes = totalSeconds / 60;
+                        const totalHours = totalMinutes / 60;
+                        const totalDays = totalHours / 24;
 
-					const totalSeconds = differenceInMs / 1000;
-					const totalMinutes = totalSeconds / 60;
-					const totalHours = totalMinutes / 60;
-					const totalDays = totalHours / 24;
+                        const secs = Math.floor(totalSeconds) % 60;
+                        const mins = Math.floor(totalMinutes) % 60;
+                        const hours = Math.floor(totalHours) % 24;
+                        const days = Math.floor(totalDays);
 
-					const secs = Math.floor(totalSeconds) % 60;
-					const mins = Math.floor(totalMinutes) % 60;
-					const hours = Math.floor(totalHours) % 24;
-					const days = Math.floor(totalDays);
+                        const countdownElem =
+                            document.getElementById("countdown");
+                        countdownElem.classList.add("js");
 
-					const countdownElem = document.getElementById("countdown");
-					countdownElem.classList.add("js")
+                        if (differenceInMs < 0) {
+                            countdownElem.textContent =
+                                "HawkHacks 2024 has begun!";
+                            document.getElementById("sign-up").style.display =
+                                "none";
+                            return;
+                        } else {
+                            countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2024!`;
 
+                            window.requestAnimationFrame(countdown);
+                        }
+                    };
+                    window.requestAnimationFrame(countdown);
+                </script>
+                <br /><br />
+                <div class="sign-up">
+                    <a
+                        href="https://forms.gle/3So1ojUt1hA75UkX6"
+                        target="_blank"
+                        >Participant sign up</a
+                    >
+                </div>
 
-					if (differenceInMs < 0) {
-						countdownElem.textContent = "HawkHacks 2024 has begun!";
-						document.getElementById("sign-up").style.display = "none";
-						return;
-					} else {
-						countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2024!`;
-
-						window.requestAnimationFrame(countdown);
-					}
-				}
-				window.requestAnimationFrame(countdown);
-			</script>
-				<br><br>
-			<div class="sign-up">
-				<a href="https://forms.gle/3So1ojUt1hA75UkX6" target="_blank">Participant sign up</a>
-			</div>
-			
-			<div class="sign-up">
-				<a href="https://forms.gle/6VbRWhiJjCHbG8hj8" target="_blank">Volunteer sign up</a>
-			</div>
-		</div>
-
-		<section>
-			<h2>What is HawkHacks?</h2>
-			<hr>
-			<p>HawkHacks is an international virtual hackathon for middle and high school students on <span
-					class="highlight"> Saturday, May 25th,</span> and <span class="highlight">Sunday, May 26th</span>.
-				Make
-				teams of up to four people (individuals welcome!) and get ready for a weekend full of brainstorming,
-				coding, and pitching.
-
-				<br><br>
-				Hawkhacks will consist of two segments:
-				<br><br>
-
-				<span class="highlight">Ideathon:</span> You will have the weekend (both days) to build a coding-related
-				solution related to a given problem, meet with expert mentors, and develop a pitch.
-				<br><br>
-				<span class="highlight">Capture the flag:</span> On Sunday you will be given a set of competitive-coding
-				style problems themed towards our chosen social issues.
-				<br><br>
-
-				The top performers accross both segments will be declared the winners! Registration is open! Click here
-				to sign up. (Note: at least one team member must be 13 or older to
-				sign up for HawkHacks).
-				<br>
-				<br>
-			</p>
-
-			<div class="sign-up">
-				<a href="https://forms.gle/3So1ojUt1hA75UkX6" target="_blank">Sign up now!</a>
-			</div>
-		</section>
-        
-        <section>
-            <h2>Sponsors</h2>
-            <div id="sponser-wrapper">
-                <a class="sponser" href="https://wolfram.com">
-                    <img src="wolfram-corporate-logo-horz-med.png" />
-                </a>
-                <a class="sponser" href="https://www.interviewcake.com/">
-                    <img src="cake_logo_white_on_blue.png" />
-                </a>
-		<a class="sponser" href="https://vercel.com">
-		    <img src="vercel-logotype-light.png" style="background-color: transparent !important;" />
-		</a>
+                <div class="sign-up">
+                    <a
+                        href="https://forms.gle/6VbRWhiJjCHbG8hj8"
+                        target="_blank"
+                        >Volunteer sign up</a
+                    >
+                </div>
             </div>
-        </section>
 
-	</main>
+            <section>
+                <h2>What is HawkHacks?</h2>
+                <hr />
+                <p>
+                    HawkHacks is an international virtual hackathon for middle
+                    and high school students on
+                    <span class="highlight"> Saturday, May 25th,</span> and
+                    <span class="highlight">Sunday, May 26th</span>. Make teams
+                    of up to four people (individuals welcome!) and get ready
+                    for a weekend full of brainstorming, coding, and pitching.
 
-</body>
+                    <br /><br />
+                    Hawkhacks will consist of two segments:
+                    <br /><br />
 
+                    <span class="highlight">Ideathon:</span> You will have the
+                    weekend (both days) to build a coding-related solution
+                    related to a given problem, meet with expert mentors, and
+                    develop a pitch. <br /><br />
+                    <span class="highlight">Capture the flag:</span> On Sunday
+                    you will be given a set of competitive-coding style problems
+                    themed towards our chosen social issues. <br /><br />
+
+                    The top performers accross both segments will be declared
+                    the winners! Registration is open! Click here to sign up.
+                    (Note: at least one team member must be 13 or older to sign
+                    up for HawkHacks).
+                    <br />
+                    <br />
+                </p>
+
+                <div class="sign-up">
+                    <a
+                        href="https://forms.gle/3So1ojUt1hA75UkX6"
+                        target="_blank"
+                        >Sign up now!</a
+                    >
+                </div>
+            </section>
+
+            <section>
+                <h2>Sponsors</h2>
+                <div id="sponser-wrapper">
+                    <a class="sponser" href="https://wolfram.com">
+                        <img src="wolfram-corporate-logo-horz-med.png" />
+                    </a>
+                    <a class="sponser" href="https://www.interviewcake.com/">
+                        <img src="cake_logo_white_on_blue.png" />
+                    </a>
+                    <a class="sponser" href="https://vercel.com">
+                        <img
+                            src="vercel-logotype-light.png"
+                            style="background-color: transparent !important"
+                        />
+                    </a>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
