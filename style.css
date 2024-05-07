@@ -2,6 +2,7 @@ body {
     /* --color-bg: hsl(257.59, 100%, 10%); */
     --color-bg: hsl(256.62, 52.85%, 10%);
     --color-text: #eee;
+    --color-text-deemph: #aaa;
 
     --brand-dark-purple: #5e3abc;
     --brand-light-purple: #d6c5ff;
@@ -235,4 +236,38 @@ h1 > div {
 .sponser > img {
     background-color: #fff;
     width: 100%;
+}
+
+#mentors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: 2em;
+}
+
+#mentors > div {
+    display: inline-block;
+    min-width: 20em;
+}
+
+#mentors > div > img {
+    width: 50%;
+    clip-path: circle(50% at center);
+}
+
+#mentors > div > h3 {
+    margin-bottom: 0;
+}
+
+#mentors > div > .title {
+    color: var(--color-text-deemph);
+    margin-top: 0;
+}
+
+.gs {
+    filter: grayscale(100%);
+    transition: filter 0.25s ease-in-out;
+}
+
+.gs:hover {
+    filter: grayscale(25%);
 }
