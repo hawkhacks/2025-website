@@ -243,20 +243,23 @@ h1 > div {
 }
 
 #mentors > div {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     min-width: 20em;
+    height: fit-content;
 }
 
 #mentors > div > img {
-    width: 50%;
+    width: 10em;
+    margin-right: 2em;
     clip-path: circle(50% at center);
 }
 
-#mentors > div > h3 {
+#mentors > div h3 {
     margin-bottom: 0;
 }
 
-#mentors > div > .title {
+#mentors > div .title {
     color: var(--color-text-deemph);
     margin-top: 0;
 }
