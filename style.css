@@ -262,6 +262,7 @@ h1 > div {
 #mentors > div .title {
     color: var(--color-text-deemph);
     margin-top: 0;
+    font-style: italic;
 }
 
 .gs {
