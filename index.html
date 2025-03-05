@@ -14,7 +14,6 @@
     <body>
         <div id="main-nav-wrapper">
             <nav id="main-nav">
-                <!-- I feel like these should be consistent/have an indicator as to whether they open in  a new page or scroll -->
                 <a id="home" href="index.html">Home</a>
                 <a id="history" href="history.html">History</a>
                 <a id="schedule" href="schedule.html">Schedule</a>
@@ -36,7 +35,7 @@
                 <script>
                     const countdown = () => {
                         const current = Date.now();
-                        const end = Date.parse("2024-05-25T10:00:00.000-05:00");
+                        const end = Date.parse("2025-05-17T10:00:00.000-05:00");
                         const differenceInMs = end - current;
 
                         const totalSeconds = differenceInMs / 1000;
@@ -55,12 +54,12 @@
 
                         if (differenceInMs < 0) {
                             countdownElem.textContent =
-                                "HawkHacks 2024 has begun!";
+                                "HawkHacks 2025 has begun!";
                             document.getElementById("sign-up").style.display =
                                 "none";
                             return;
                         } else {
-                            countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2024, on May 25th / 26th!`;
+                            countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2025, on May 17th!`;
 
                             window.requestAnimationFrame(countdown);
                         }
@@ -78,8 +77,7 @@
                 <p>
                     HawkHacks is an international virtual hackathon for middle
                     and high school students on
-                    <span class="highlight"> Saturday, May 25th,</span> and
-                    <span class="highlight">Sunday, May 26th</span>. Make teams
+                    <span class="highlight"> Saturday, May 17th. Make teams
                     of up to four people (individuals welcome!) and get ready
                     for a weekend full of brainstorming, coding, and pitching.
 
@@ -91,8 +89,8 @@
                     weekend (both days) to build a coding-related solution
                     related to a given problem, meet with expert mentors, and
                     develop a pitch. <br /><br />
-                    <span class="highlight">Capture the flag:</span> On Sunday
-                    you will be given a set of competitive-coding style problems
+                    <span class="highlight">Capture the flag:</span> You will 
+                    be given a set of competitive-coding style problems
                     themed towards our chosen social issues. <br /><br />
 
                     The top performers accross both segments will be declared
@@ -116,10 +114,10 @@
             <hr />
             <section>
                 <h2>Prizes</h2>
+                <!-- TODO 2025 -->
                 <p>
-                    <span class="highlight">1st Place:</span> $100 in cash,
-                    Vercel merch (water bottles, hats, stickers), and Wolfram
-                    Alpha Pro subscriptions
+                    <span class="highlight">1st Place:</span>
+                    InterviewCake subscriptions!
                 </p>
                 <p>
                     <span class="highlight">$7000</span> of additional prizes
@@ -132,6 +130,8 @@
             <section>
                 <h2>Mentors</h2>
                 <div id="mentors">
+                    <!-- TODO 2025 -->
+                    <!--
                     <div>
                         <img
                             class="gs"
@@ -153,90 +153,7 @@
                             research, and startups.
                         </p>
                     </div>
-                    <div>
-                        <img
-                            class="gs"
-                            src="mentors/Brecque.png"
-                            alt="Charles Brecque"
-                        />
-                        <div>
-                            <h3>Charles Brecque</h3>
-                            <p class="title">Founder and CEO of TextMine</p>
-                        </div>
-                        <p class="bio">
-                            Charles started TextMine in Oxford in 2020 with
-                            Amber Akhtar after experiencing data loss and
-                            friction when working with legal and financial
-                            business-critical documents. TextMine leverages
-                            patented knowledge graph technology and large
-                            language models in order to structure the
-                            unstructured data in documents. Prior to TextMine,
-                            Charles was the first commercial hire at Mind
-                            Foundry, a machine learning spin-out from the
-                            University of Oxford. Charles is a graduate of the
-                            École Centrale de Lyon.
-                        </p>
-                    </div>
-                    <div>
-                        <img
-                            class="gs"
-                            src="mentors/Robila.jpg"
-                            alt="Dr. Stefan Robila"
-                        />
-                        <div>
-                            <h3>Dr. Stefan Robila</h3>
-                            <p class="title">
-                                Professor of Computer Science / Director of the
-                                Computational Sensing Laboratory at Montclair
-                                State University
-                            </p>
-                        </div>
-                        <p class="bio">
-                            Between Jan 2018 and Jan 2021 Dr. Robila served as
-                            Program Director in the
-                            <a href="https://www.nsf.gov/div/index.jsp?div=OAC"
-                                >Office of Advanced Cyberinfrastructure (OAC)</a
-                            >
-                            at the National Science Foundation. Dr. Robila's
-                            teaching experience spans the Computer Science and
-                            IT undergraduate and graduate curriculum and
-                            includes all introductory computing courses (taught
-                            in Pascal, C, C++, Java and Python), discrete
-                            mathematics, operating systems, computer
-                            organization, computer security, robotics, pattern
-                            recognition, high performance computing, and theory
-                            of programming languages. Dr. Robila completed his
-                            M.S. (2000) and Ph.D. (2002) in Computer Science at
-                            Syracuse University and his B.S. (1997) at the
-                            University of Iasi (Romania). He is an ACM and IEEE
-                            senior member and IEEE Region I award recipient.
-                        </p>
-                    </div>
-                    <div>
-                        <img
-                            src="mentors/Shiels.png"
-                            alt="Luke Shiels"
-                            class="gs"
-                        />
-                        <div>
-                            <h3>Luke Shiels</h3>
-                            <p class="title">
-                                Founding Design Engineer at Delphi, former CEO
-                                of Solene
-                            </p>
-                        </div>
-                        <p class="bio">
-                            Luke is a self-taught software engineer who has
-                            worked at numerous early-stage technology startups
-                            and currently is the founding design engineer at
-                            Delphi, an AI cloning platform. Before Delphi, he
-                            helped lead a 15-person engineering team at an
-                            early-stage fintech startup, helping drive the
-                            company's valuation to approximately $300 million.
-                            He then served as CEO of Solene, advising
-                            venture-backed AI startups in New York City.
-                        </p>
-                    </div>
+                    -->
                 </div>
             </section>
 
@@ -247,38 +164,10 @@
                 <div id="sponser-wrapper">
                     <a
                         class="sponser"
-                        href="https://wolfram.com"
-                        target="_blank"
-                    >
-                        <img
-                            class="gs"
-                            src="wolfram-corporate-logo-horz-med.png"
-                        />
-                    </a>
-                    <a
-                        class="sponser"
                         href="https://www.interviewcake.com/"
                         target="_blank"
                     >
                         <img class="gs" src="cake_logo_white_on_blue.png" />
-                    </a>
-                    <a
-                        class="sponser"
-                        href="https://vercel.com"
-                        target="_blank"
-                    >
-                        <img
-                            class="gs"
-                            src="vercel-logotype-light.png"
-                            style="background-color: transparent !important"
-                        />
-                    </a>
-                    <a
-                        href="https://www.productteacher.com"
-                        class="sponser"
-                        target="_blank"
-                    >
-                        <img src="Product_Teacher_Color_Logo.png" class="gs" />
                     </a>
                 </div>
                 <br />
