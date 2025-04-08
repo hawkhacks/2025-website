@@ -2,136 +2,130 @@
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="hsl(256.62, 52.85%, 10%)" />
-        <meta name="color-scheme" content="only dark" />
-        <title>HawkHacks</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="hsl(256.62, 52.85%, 10%)" />
+    <meta name="color-scheme" content="only dark" />
+    <title>HawkHacks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body>
-        <div id="main-nav-wrapper">
-            <nav id="main-nav">
-                <a id="home" href="index.html">Home</a>
-                <a id="history" href="history.html">History</a>
-                <a id="schedule" href="schedule.html">Schedule</a>
-                <a id="theme" href="theme.html">Theme</a>
-                <a id="ctf" href="ctf.html">CTF</a>
-            </nav>
+  <body>
+    <div id="main-nav-wrapper">
+      <nav id="main-nav">
+        <a id="home" href="index.html">Home</a>
+        <a id="history" href="history.html">History</a>
+        <a id="schedule" href="schedule.html">Schedule</a>
+        <a id="theme" href="theme.html">Theme</a>
+        <a id="ctf" href="ctf.html">CTF</a>
+      </nav>
+    </div>
+
+    <main>
+      <h1>
+        <div>
+          <img id="icon" src="favicon.png" />
+          <span>Hawk<wbr />Hacks</span>
         </div>
+      </h1>
 
-        <main>
-            <h1>
-                <div>
-                    <img id="icon" src="favicon.png" />
-                    <span>Hawk<wbr />Hacks</span>
-                </div>
-            </h1>
+      <div id="below-header">
+        <article id="countdown"></article>
+        <script>
+          const countdown = () => {
+            const current = Date.now();
+            const end = Date.parse("2025-05-17T10:00:00.000-05:00");
+            const differenceInMs = end - current;
 
-            <div id="below-header">
-                <article id="countdown"></article>
-                <script>
-                    const countdown = () => {
-                        const current = Date.now();
-                        const end = Date.parse("2025-05-17T10:00:00.000-05:00");
-                        const differenceInMs = end - current;
+            const totalSeconds = differenceInMs / 1000;
+            const totalMinutes = totalSeconds / 60;
+            const totalHours = totalMinutes / 60;
+            const totalDays = totalHours / 24;
 
-                        const totalSeconds = differenceInMs / 1000;
-                        const totalMinutes = totalSeconds / 60;
-                        const totalHours = totalMinutes / 60;
-                        const totalDays = totalHours / 24;
+            const secs = Math.floor(totalSeconds) % 60;
+            const mins = Math.floor(totalMinutes) % 60;
+            const hours = Math.floor(totalHours) % 24;
+            const days = Math.floor(totalDays);
 
-                        const secs = Math.floor(totalSeconds) % 60;
-                        const mins = Math.floor(totalMinutes) % 60;
-                        const hours = Math.floor(totalHours) % 24;
-                        const days = Math.floor(totalDays);
+            const countdownElem = document.getElementById("countdown");
+            countdownElem.classList.add("js");
 
-                        const countdownElem =
-                            document.getElementById("countdown");
-                        countdownElem.classList.add("js");
+            if (differenceInMs < 0) {
+              countdownElem.textContent = "HawkHacks 2025 has begun!";
+              document.getElementById("sign-up").style.display = "none";
+              return;
+            } else {
+              countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2025, on May 17th!`;
 
-                        if (differenceInMs < 0) {
-                            countdownElem.textContent =
-                                "HawkHacks 2025 has begun!";
-                            document.getElementById("sign-up").style.display =
-                                "none";
-                            return;
-                        } else {
-                            countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2025, on May 17th!`;
+              window.requestAnimationFrame(countdown);
+            }
+          };
+          window.requestAnimationFrame(countdown);
+        </script>
+        <br />
 
-                            window.requestAnimationFrame(countdown);
-                        }
-                    };
-                    window.requestAnimationFrame(countdown);
-                </script>
-                <br />
+        <p>Registration is closed.</p>
+      </div>
 
-                <p>Registration is closed.</p>
-            </div>
+      <hr />
+      <section>
+        <h2>What is HawkHacks?</h2>
+        <p>
+          HawkHacks is an international virtual hackathon for middle and high
+          school students on
+          <span class="highlight"> Saturday, May 17th.</span> Make teams of up
+          to four people (individuals welcome!) and get ready for a weekend full
+          of brainstorming, coding, and pitching.
 
-            <hr />
-            <section>
-                <h2>What is HawkHacks?</h2>
-                <p>
-                    HawkHacks is an international virtual hackathon for middle
-                    and high school students on
-                    <span class="highlight"> Saturday, May 17th. Make teams
-                    of up to four people (individuals welcome!) and get ready
-                    for a weekend full of brainstorming, coding, and pitching.
+          <br /><br />
+          Hawkhacks will consist of two segments:
+          <br /><br />
 
-                    <br /><br />
-                    Hawkhacks will consist of two segments:
-                    <br /><br />
+          <span class="highlight">Ideathon:</span> You will have the weekend
+          (both days) to build a coding-related solution related to a given
+          problem, meet with expert mentors, and develop a pitch. <br /><br />
+          <span class="highlight">Capture the flag:</span> You will be given a
+          set of competitive-coding style problems themed towards our chosen
+          social issues. <br /><br />
 
-                    <span class="highlight">Ideathon:</span> You will have the
-                    weekend (both days) to build a coding-related solution
-                    related to a given problem, meet with expert mentors, and
-                    develop a pitch. <br /><br />
-                    <span class="highlight">Capture the flag:</span> You will 
-                    be given a set of competitive-coding style problems
-                    themed towards our chosen social issues. <br /><br />
+          The top performers accross both segments will be declared the winners!
+          Registration is open! Email
+          <span class="highlight">hchs.hawkhacks@gmail.com</span> with any
+          questions.
+          <br />
+        </p>
 
-                    The top performers accross both segments will be declared
-                    the winners! Registration is open! Email
-                    <span class="highlight">hchs.hawkhacks@gmail.com</span> with
-                    any questions.
-                    <br />
-                </p>
+        <div class="sign-up">
+          <a href="https://forms.fillout.com/t/byromv4Emjus" target="_blank"
+            >Sign up now!</a
+          >
+          <br />
+          <br />
+        </div>
+      </section>
 
-                <div class="sign-up">
-                    <a
-                        href="https://forms.fillout.com/t/byromv4Emjus"
-                        target="_blank"
-                        >Sign up now!</a
-                    >
-                    <br />
-                    <br />
-                </div>
-            </section>
+      <hr />
+      <section>
+        <h2>Prizes</h2>
+        <!-- TODO 2025 -->
+        <p>
+          <span class="highlight">1st Place:</span>
+          InterviewCake subscriptions!
+        </p>
+        <p>
+          <span class="highlight">$7000</span> of additional prizes that will be
+          awarded to other winners.
+        </p>
+      </section>
 
-            <hr />
-            <section>
-                <h2>Prizes</h2>
-                <!-- TODO 2025 -->
-                <p>
-                    <span class="highlight">1st Place:</span>
-                    InterviewCake subscriptions!
-                </p>
-                <p>
-                    <span class="highlight">$7000</span> of additional prizes
-                    that will be awarded to other winners.
-                </p>
-            </section>
-
-            <br />
-            <hr />
-            <section>
-                <h2>Mentors</h2>
-                <div id="mentors">
-                    <!-- TODO 2025 -->
-                    <!--
+      <br />
+      <hr />
+      <section>
+        <h2>Mentors</h2>
+        <div id="mentors">
+          <!-- TODO 2025 -->
+          <!--
                     <div>
                         <img
                             class="gs"
@@ -154,31 +148,30 @@
                         </p>
                     </div>
                     -->
-                </div>
-            </section>
+        </div>
+      </section>
 
-            <br />
-            <hr />
-            <section>
-                <h2>Sponsors</h2>
-                <div id="sponser-wrapper">
-                    <a
-                        class="sponser"
-                        href="https://www.interviewcake.com/"
-                        target="_blank"
-                    >
-                        <img class="gs" src="cake_logo_white_on_blue.png" />
-                    </a>
-                </div>
-                <br />
-                <br />
-                <p>
-                    The HawkHacks logo was created by
-                    <a href="https://xtjart.weebly.com">Xavier Train-Jimenez</a
-                    >, an amazing graphic design student at the High School of
-                    Art and Design.
-                </p>
-            </section>
-        </main>
-    </body>
+      <br />
+      <hr />
+      <section>
+        <h2>Sponsors</h2>
+        <div id="sponser-wrapper">
+          <a
+            class="sponser"
+            href="https://www.interviewcake.com/"
+            target="_blank"
+          >
+            <img class="gs" src="cake_logo_white_on_blue.png" />
+          </a>
+        </div>
+        <br />
+        <br />
+        <p>
+          The HawkHacks logo was created by
+          <a href="https://xtjart.weebly.com">Xavier Train-Jimenez</a>, an
+          amazing graphic design student at the High School of Art and Design.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
