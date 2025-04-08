@@ -56,7 +56,7 @@
               document.getElementById("sign-up").style.display = "none";
               return;
             } else {
-              countdownElem.innerHTML = `${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds until HawkHacks 2025, on May 17th!`;
+              countdownElem.innerHTML = `<b>${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds</b><br/>until HawkHacks 2025, on May 17th!`;
 
               window.requestAnimationFrame(countdown);
             }
@@ -86,17 +86,19 @@
           Hawkhacks will consist of two segments:
           <br /><br />
 
-          <span class="highlight">Ideathon:</span> You will have the weekend
-          (both days) to build a coding-related solution related to a given
-          problem, meet with expert mentors, and develop a pitch. <br /><br />
+          <span class="highlight">Ideathon:</span> You will have the day to
+          build a coding-related solution related to a given problem, meet with
+          expert mentors, and develop a pitch. <br /><br />
           <span class="highlight">Capture the flag:</span> You will be given a
           set of competitive-coding style problems themed towards our chosen
           social issues. <br /><br />
 
           The top performers accross both segments will be declared the winners!
           Registration is open! Email
-          <span class="highlight">hchs.hawkhacks@gmail.com</span> with any
-          questions.
+          <a href="mailto:hchs.hawkhacks@gmail.com"
+            ><span class="highlight">hchs.hawkhacks@gmail.com</span></a
+          >
+          with any questions.
           <br />
         </p>
 
@@ -118,45 +120,37 @@
           InterviewCake subscriptions!
         </p>
         <p>
-          <span class="highlight">$7000</span> of additional prizes that will be
+          <span class="highlight">$2000</span> of additional prizes that will be
           awarded to other winners.
         </p>
       </section>
 
       <br />
       <hr />
-      <section>
+      <section style="display: none">
         <h2>Mentors</h2>
         <div id="mentors">
           <!-- TODO 2025 -->
-          <!--
-                    <div>
-                        <img
-                            class="gs"
-                            src="mentors/Karina.jpg"
-                            alt="Karina Chung"
-                        />
-                        <div>
-                            <h3>Karina Chung</h3>
-                            <p class="title">Student at Harvard (HCHS '22)</p>
-                        </div>
-                        <p class="bio">
-                            Karina co-organized and led HawkHacks 2021 and 2022.
-                            Her interests include climate and environment and
-                            responsible technology, and she co-founded a
-                            nonprofit from an AI hackathon in high school.
-                            Karina now studies Applied Math and Data Science at
-                            Harvard, and has worked within and beyond the
-                            climate space across private equity, academic
-                            research, and startups.
-                        </p>
-                    </div>
-                    -->
+          <div>
+            <img class="gs" src="mentors/Karina.jpg" alt="Karina Chung" />
+            <div>
+              <h3>Karina Chung</h3>
+              <p class="title">Student at Harvard (HCHS '22)</p>
+            </div>
+            <p class="bio">
+              Karina co-organized and led HawkHacks 2021 and 2022. Her interests
+              include climate and environment and responsible technology, and
+              she co-founded a nonprofit from an AI hackathon in high school.
+              Karina now studies Applied Math and Data Science at Harvard, and
+              has worked within and beyond the climate space across private
+              equity, academic research, and startups.
+            </p>
+          </div>
         </div>
+        <br />
+        <hr />
       </section>
 
-      <br />
-      <hr />
       <section>
         <h2>Sponsors</h2>
         <div id="sponser-wrapper">
