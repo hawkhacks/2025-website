@@ -54,7 +54,9 @@
 
             if (differenceInMs < 0) {
               countdownElem.textContent = "HawkHacks 2025 has begun!";
-              document.getElementById("sign-up").style.display = "none";
+              for (const btn of document.getElementsByClassName("sign-up")) {
+                btn.style.display = "none";
+              }
               return;
             } else {
               countdownElem.innerHTML = `<b>${days} days, ${hours} hours, ${mins} minutes, and ${secs} seconds</b><br/>until HawkHacks 2025, on May 17th!`;
